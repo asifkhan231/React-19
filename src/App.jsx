@@ -1,17 +1,17 @@
-import React from "react"
-import Login from "./newFeauters/useAction/simpleForm"
-import LoginAction from "./newFeauters/useAction/formAction"
-import LoginActionState from "./newFeauters/useAction/useAction-React19"
+import React, { Suspense } from "react"
+import UseHandleApi from "./use hook/useApi"
+import RegularApiHandle from "./use hook/regularApiHandle"
 
 function App() {
 
 
   return (
-    <div>
-      {/* <Login /> */}
-      {/* <LoginAction/> */}
-      <LoginActionState/>
-    </div>
+    <Suspense fallback={"loading..."}>
+      <div>
+        <UseHandleApi />
+        {/* <RegularApiHandle/> */}
+      </div>
+    </Suspense>
   )
 }
 
